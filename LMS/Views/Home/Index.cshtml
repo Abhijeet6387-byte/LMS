@@ -1,0 +1,774 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/css/all.css" rel="stylesheet" />
+    <style>
+        :root {
+            --color1: #00447e;
+            --color2: orange;
+            --color3: black;
+        }
+        body{
+            overflow-x:hidden;
+        }
+
+        .bg-mycolor1 {
+            background: var(--color1);
+        }
+
+        .bg-mycolor2 {
+            background: var(--color2);
+        }
+
+        .bg-mycolor3 {
+            background: var(--color3);
+        }
+
+        .txt-color1 {
+            color: var(--color1) !important;
+        }
+
+
+        .txt-color2 {
+            color: var(--color2) !important;
+        }
+
+        .txt-color3 {
+            color: var(--color3) !important;
+        }
+
+        .ic {
+            border: 1px solid black;
+            height: 20px;
+            width: 20px;
+            line-height: 20px;
+            transition: all .6s;
+        }
+
+            .ic:hover {
+                border: 1px solid var(--color1);
+                color: var(--color1);
+                transition: all .6s;
+                transform: rotate(360deg);
+            }
+
+        .t1 {
+            font-size: 14px;
+            color: black;
+            background:orange;
+
+        }
+
+            .t1 a {
+                text-decoration: none;
+                color: black;
+            }
+
+        #menu {
+            background: transparent !important;
+            
+        }
+
+        .slider {
+            min-height: 500px;
+            background-image: url('../../content/images/8271020_5514.jpg');
+            padding:2px 0px 2px 0px;
+            background-size: 100% 100%;
+            background-position: center;
+            animation: img 10s infinite;
+        }
+        @@keyframes img{
+                 0%
+        {
+            background-image: url('../../content/images/7732666_5293.jpg');
+        }
+        20% {
+            background-image: url('../../content/images/9175118_6461.jpg');
+        }
+            40% {
+                background-image: url('../../content/images/img1/learning111.jpg');
+            }
+            60% {
+                
+                background-image: url('../../content/images/learning-education-academics-knowledge-concept.jpg');
+            }
+            80% {
+                
+                background-image: url('../../content/images/8642448_3967400.jpg');
+            }
+            100% {
+                
+                background-image: url('../../content/images/img1/learning080.jpg');
+            }
+             }
+
+        .login {
+            background: rgba(255,255,255,.2);
+            margin-top: 8%;
+            padding: 4%;
+            backdrop-filter: blur(3px);
+            color: white;
+            border-radius: 10px;
+        }
+
+        .form-control {
+            border-radius: 0px !important;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .btn1 {
+            height: 50px;
+            width: 120px;
+            border: none;
+            color: white;
+        }
+
+        .sicon {
+            height: 50px;
+            width: 50px;
+            background: var(--color2);
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            font-size: 25px;
+            color: white;
+        }
+
+        .abouttext {
+            font-size: 18px;
+            text-align: justify;
+            margin: 0px 3px 0px 3px;
+        }
+
+        .faqText {
+            font-size: 18px;
+            text-align: justify;
+            margin: 3% 5% 0% 5%;
+        }
+        .t2{
+            background:transparent;
+        }
+        .s1 {
+            box-shadow: 0px 0px 8px var(--color1);
+            font-size: 15px;
+            line-height: 27px;
+            border-radius: 10px;
+            transform:scale(.8);
+            transition: all ease 1s;
+        } 
+        .s1:hover{
+            transform:scale(1.1);
+            transition:all ease 1s;
+        }
+        .form {
+            box-shadow: 0px 0px 8px var(--color1);
+            border-radius: 10px;
+            background: #deeef0;
+            
+        }
+        .f1{
+            box-shadow:0px 0px 2px var(--color1);
+            
+        }
+        .f1:focus{
+            border-color:var(--color1);
+            outline:none;
+        }
+        .cinfo {
+            
+            transition: transform ease 2s;
+        }
+        .cinfo:hover{
+            transform:translateY(-25px);
+            transition:transform ease 2s;
+        }
+        .ficon {
+            transition: all ease 2s;
+        }
+        .ficon:hover{
+            border-bottom:2px solid var(--color2);
+            transition:all ease 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row t1 text-center py-1" id="home">
+            <div class="col-sm-4">
+                <a href="#faq">FAQs</a> |
+                <a href="#contact">Contact & Support</a> |
+                <a href="#home" class="txt-color1">Sign Up</a> |
+                <a href="#register" class="txt-color1">Sign In</a> |
+            </div>
+            <div class="col-sm-4">
+                Welcome to My Learning Management Software
+            </div>
+            <div class="col-sm-4">
+                <a ficon" href="#"><i class="fa-brands fa-facebook ic"></i></a>
+                <a ficon" href="#"><i class="fa-brands fa-twitter ic"></i></a>
+                <a ficon" href="#"><i class="fa-brands fa-youtube ic"></i></a>
+                <a ficon" href="#"><i class="fa-brands fa-instagram ic"></i></a>
+                <a ficon" href="#"><i class="fa-brands fa-linkedin ic"></i></a>
+
+            </div>
+        </div>
+        <div class="row t2 py-2 shadow bg-body-tertiary rounded">
+            
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-2 fs-4 pt-1 ps-5">
+                        Brain<b class="txt-color1">
+                            Lit
+                                  <i class="fa-solid fa-brain"></i>
+                        </b>
+                    </div>
+                    <div class="col-sm-6 ps-5">
+
+                        <!-- Start Menu -->
+                        <nav class="navbar navbar-expand-lg bg-body-tertiary p-0" id="menu">
+                            <div class="container-fluid">
+
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#home"><i class="fa-solid fa-house"></i> Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#about"><i class="fa-solid fa-address-card"></i> About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#course"><i class="fa-solid fa-book"></i> Our Courses</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#register"><i class="fa-solid fa-right-to-bracket"></i> Register</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/home/adminlogin"><i class="fa-solid fa-user-secret"></i> Admin Login</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- End Menu -->
+
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="fa-regular fa-envelope txt-color2"></i>
+                        <b>Mail Us</b><br />
+                        abc@gmail.com
+                    </div>
+                    <div class="col-sm-2">
+                        <i class="fa-solid fa-phone txt-color2"></i>
+                        <b>Call Us</b><br />
+                        +91 2345654567
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row t3 bg-mycolor1">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <div class="row slider rounded-0" style="border-radius:0px !important">
+            <div class="col-sm-12 p-0" style="background-color:#00447ea1;">
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <div class="row">
+                            <div class="col-sm-7 text-light">
+                                <div class="fs-1 text-light"
+                                     style="line-height:45px;margin-top:18%;">
+                                    Learn <b class="txt-color2">200+</b>
+                                    <br />Best online courses from
+                                    <br />Indeed Learning
+                                </div>
+                                <b>Learn from Best Intructor</b><br />
+                                <i>Training || Development || Placement</i><br /><br />
+                                <a href="#register" class=" p-2 bg-mycolor2 text-light rounded-2 fs-6" style="text-decoration:none">Register <i class="fa-solid fa-arrow-right"></i></a>
+
+                            </div>
+                            <div class="col-sm-5 login ">
+                                <form method="post" action="/home/Login">
+                                    Username<br />
+                                    <input type="email" class="form-control shadow mb-3 bg-body-tertiary"
+                                           placeholder="Username" name="uname" />
+                                    Password<br />
+                                    <input type="password" class="form-control shadow mb-3 bg-body-tertiary"
+                                           placeholder="Password" name="passwd" />
+                                    <input type="submit" class="btn1 bg-mycolor2" value="Login" />
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row services py-4 text-center">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                    <p class="fs-3">Our <strong class="txt-color2">Services</strong></p>
+                <div class="row ">
+                    <div class="col-sm-2 mx-2 s1" style="width:265px;height:265px;padding:5px;">
+                        <i class="fa-regular fa-comments sicon"></i><br />
+                        <h5 class="text-uppercase" style="border-bottom:2px solid var(--color2);">Communication Tools</h5>
+                        <b>Facilitate interaction among students and instructors.</b>
+                        <p>Private messaging for direct communication.</p>
+                    </div>
+                    <div class="col-sm-2 mx-2 s1" style="width:265px;height:265px;padding:5px;">
+                        <i class="fa-solid fa-book-open sicon"></i><br />
+                        <h5 class="text-uppercase" style="border-bottom:2px solid var(--color2);">Course Management</h5>
+                        <b>Instructors can create and manage online courses with ease.</b>
+                        <p> Tools to design and organize course content, including lectures, quizzes, and assignments.</p>
+                    </div>
+                    <div class="col-sm-2 mx-2 s1" style="width:265px;height:265px;padding:5px;">
+                        <i class="fa-regular fa-folder-open sicon"></i><br />
+                        <h5 class="text-uppercase" style="border-bottom:2px solid var(--color2);">Resource Management</h5>
+                        <b>A repository for course materials like PDFs, videos, and more.</b>
+                        <p>Upload and share videos, podcasts, and other media.</p>
+                    </div>
+                    <div class="col-sm-2 mx-2 s1" style="width:265px;height:265px;padding:5px;">
+                        <i class="fa-solid fa-people-roof sicon"></i><br />
+                        <h5 class="text-uppercase" style="border-bottom:2px solid var(--color2);">Student Management</h5>
+                        <b>Monitor student progress with detailed analytics.</b>
+                        <p>Simplify the enrollment process for students.</p>
+                    </div>
+
+                </div>
+            </div>
+           <div class="col-sm-1"></div>
+        </div>
+        <div class="row aboutus py-3" style="min-height:300px;background:rgba(0,68,126,.2);" id="about">
+            <div class="col-sm-12 ">
+                <div class="text-center" style="line-height:20px;">
+                    <p class="fs-3">About <strong class="txt-color2">Us..</strong></p>
+                    <span style="border-bottom:2px solid var(--color2);padding-bottom:3px;font-size:16px;font-weight:500">Welcome to Indeed Learning</span>
+                </div>
+                <p class="abouttext pt-2">At Indeed Learning, we believe in the power of education to transform lives. Our mission is to provide a comprehensive and user-friendly platform that empowers learners, educators, and organizations to achieve their educational goals through innovative technology and exceptional content.</p><br />
+                <p class="fs-5 text-center" ><span style="border-bottom:2px solid var(--color2);padding-bottom:3px;font-size:18px;font-weight:500">Our Mission</span></p>
+                <p class="abouttext">Our mission is to make learning accessible, engaging, and effective for everyone. We strive to bridge the gap between traditional and digital education by offering a versatile Learning Management System that supports a wide range of learning styles and educational needs. Whether you're a student aiming to expand your knowledge, an instructor looking to deliver dynamic courses, or an organization seeking to train and upskill your team, indeed learning is here to help you succeed.</p><br />
+            </div>
+        </div>
+        <div class="row register py-5" id="register">
+            <div class="text-center" style="line-height:20px !important;">
+                <p class="fs-3">
+                    Register
+                    <b class="txt-color2">
+                        Here 
+                        <i class="fa-solid fa-user-plus"></i>
+                    </b>
+                </p>
+                <span style="border-bottom:2px solid var(--color2);padding-bottom:3px;font-size:16px;font-weight:500">Sign Up for Your Learning Journey</span>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <form action="/home/saveuser" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-sm-12 p-4 mt-5 form">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    Name<br /><input type="text"
+                                                     placeholder="Name.." name="txt_name"
+                                                     class="form-control mb-3 shadow bg-body-tertiary border-0" />
+                                </div>
+                                <div class="col-sm-6">
+
+                                    Email<br /><input type="email"
+                                                      placeholder="Email.." name="txt_email"
+                                                      class="form-control mb-3 shadow bg-body-tertiary border-0" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    Mobile<br /><input type="number"
+                                                       placeholder="Number.." name="txt_mobno"
+                                                       class="form-control mb-3 shadow bg-body-tertiary border-0" />
+                                </div>
+                                <div class="col-sm-6">
+
+                                    Profile Picture<br /><input type="file" name="file_profile"
+                                                                class="form-control mb-3 py-3 shadow bg-body-tertiary border-0" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    Course and Branch<br />
+                                    <select class="form-control mb-3 shadow bg-body-tertiary border-0" name="ddl_course">
+                                        <option>--Select Course--</option>
+                                        <option>Diploma (CS/IT)</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+
+                                    Year<br />
+                                    <select class="form-control mb-3 shadow bg-body-tertiary border-0" name="ddl_year">
+                                        <option>--Select Year --</option>
+                                        <option>1st Year</option>
+                                        <option>2nd Year</option>
+                                        <option>3rd Year</option>
+                                        <option>4th Year</option>
+                                        <option>Passout</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    Select Batch<br />
+                                    <select class="form-control mb-3 shadow bg-body-tertiary border-0" name="ddl_batch">
+                                        <option>-- Select Batch--</option>
+                                        @if (ViewBag.tb1.Rows.Count > 0)
+                                        {
+                                            foreach (var row in ViewBag.tb1.Rows)
+                                            {
+                                                <option value="@row[0]">@row[1]</option>
+                                            }
+                                        }
+
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+
+                                    Password<br /><input type="password"
+                                                         placeholder="Placeholder.." name="txt_passwd"
+                                                         class="form-control mb-3 shadow bg-body-tertiary border-0" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <br /><input type="submit"
+                                                 class="form-control mb-3 w-25 border-0" style="margin-left:37%;background-color:lightgreen;color:var(--color3);" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-sm-1"></div>
+
+        </div>
+        <div class="row faqs p-4" style="min-height: 800px; ;" id="faq">
+
+            <div class="text-center mb-4" style="line-height:10px;">
+                <p class="fs-3">Frequently  <strong class="txt-color2">Asked Question</strong></p>
+            </div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <!--FAQ-->
+                <!---toogle-->
+                <p>
+                    <button class=" bg-mycolor1 p-2" style="width:100%;border:none;border-radius:5px;color:white;text-align:left;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> What is Indeed Learning?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample">
+                        <div class="card card-body" style="width: 100%;border:2px solid var(--color1);background-color:aliceblue">
+                            Learning is an online platform designed to facilitate learning and training. It allows educators to create, manage, and deliver courses, while providing tools for students to engage with course materials and track their progress.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-1" style="border: none; border-radius: 5px; color: white; width: 100%;text-align:left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample2" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> What should I do if I forget my password?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample2">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Click on the “Forgot Password” link on the login page. Follow the instructions to reset your password. You will need access to the email address associated with your account.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-1" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample3" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How can I access my course materials?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample3">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Once enrolled, go to your dashboard, select the course from your list, and you’ll be directed to the course materials, including lectures, readings, and assignments.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-1" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample4" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How do I submit assignments? Access the assignment section within your course.
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample4">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Follow the instructions to upload your work. Ensure that your submission meets the format and deadline requirements specified by the instructor.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                
+                <hr />
+                <p class="fs-4 text-center mb-1 mt-2"><span style="border-bottom:2px solid var(--color2)">For Student</span></p>
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-2" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample5" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How do I enroll in a course?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample5">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Go to the course catalog, find the course you’re interested in, and click “Enroll.” If enrollment requires approval, you may need to wait for confirmation.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-2" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample6" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How can I access my course materials?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample6">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Once enrolled, go to your dashboard, select the course from your list, and you’ll be directed to the course materials, including lectures, readings, and assignments.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-2" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample7" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How do I submit assignments?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample7">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Access the assignment section within your course. Follow the instructions to upload your work. Ensure that your submission meets the format and deadline requirements specified by the instructor.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-2" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample8" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> Who should I contact if I have questions about the course content?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample8">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Reach out to your course instructor or teaching assistant via the LMS messaging system or the contact information provided in the course syllabus.
+
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+
+                <hr />
+                <p class="fs-4 text-center mb-1 mt-2"><span style="border-bottom:2px solid var(--color2)">To Create New Course</span></p>
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-2" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample9" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How do I create a new course?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample9">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Log in to your instructor account, navigate to the “Course Management” section, and select “Create New Course.” Follow the prompts to set up your course, including adding content and setting up grading criteria.
+
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-2" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample10" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How can I grade assignments?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample10">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Go to the “Grades” section of the course management area. Select the assignment or test you wish to grade and enter your feedback and scores.
+
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!---toogle-->
+                <p>
+                    <button class="bg-mycolor1 p-2 mt-2" style="border: none; border-radius: 5px; color: white; width: 100%; text-align: left" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample11" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <i class="fa-solid fa-angles-right"></i> How do I communicate with my students?
+                    </button>
+                </p>
+                <div style="max-height: 120px;">
+                    <div class="collapse " id="collapseWidthExample11">
+                        <div class="card card-body" style="width: 100%; border: 2px solid var(--color1); background-color: aliceblue">
+                            Use the LMS messaging system or the course announcement feature to communicate important information, feedback, or updates to your students.
+                        </div>
+                    </div>
+                </div>
+                <!---toogle-->
+                <!--FAQ-->
+            </div>
+            <div class="col-sm-1">
+                
+            </div>
+            
+        </div>
+        <div class="row contactus" style="min-height:900px;background:#ee4a621f;" id="contact">
+            <div class="col-sm-12 bg-light">
+                <div class="row c1 mt-4">
+                    <div class="text-center" style="line-height:10px;">
+                        <p class="fs-3">Contact <strong class="txt-color2">Us..</strong></p>
+                    </div>
+                </div>
+                <div class="row c2" style="min-height:100px">
+                    <div class="col-sm-7">
+                        <div class="container">
+                            <h6 class="fs-4"><span  style="border-bottom:2px solid var(--color2)">Get In Touch</span></h6><br />
+                            <form action="/home/save" method="post">
+                                <div class="row mt-2">
+                                    <div class="col-sm-6">
+                                        <input type="text" name="txt_title" placeholder="Full Name" class="form-control shadow bg-body-tertiary f1" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="email" name="add_email" placeholder="Enter Your Email" class="form-control shadow bg-body-tertiary f1" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <input type="number" name="txt_num" placeholder="Enter Your Number" class="form-control shadow bg-body-tertiary f1" />
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="text" name="txt_subject" placeholder="Enter Your Subject" class="form-control shadow bg-body-tertiary f1" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <textarea class="form-control shadow bg-body-tertiary f1" name="text_desc" placeholder="Message" style="height:130px; resize:none"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-sm-12">
+                                        <input type="submit" value="Send Message" class="form-control mb-3 shadow  bg-mycolor2 text-light  border-0 w-25" />
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 mb-4">
+                        <div class="container p-4 cinfo" style="min-height:200px;background:var(--color2);width:80%;box-shadow:0px 0px 14px 0px var(--color1);border-radius:10px;">
+                            <h4 class="fs-3 text-light">Contact Info</h4>
+                            <h6 class="text-light my-4">We're Here to Help</h6>
+                            <hr />
+                            <p style="color:floralwhite">
+                                <i class="fa-solid fa-location-dot"></i>  &emsp;&nbsp;Vikas Nagar, Lucknow,<br />
+                                &emsp;&emsp; Pradesh 226022
+                            </p>
+                            <p style="color:floralwhite"><i class="fa-solid fa-mobile"></i>&nbsp;&emsp;+91 6487327712</p>
+
+                            <p style="color:floralwhite"><i class="fa-solid fa-envelope"></i>&nbsp;&emsp;indeed@email.com</p>
+                            <hr />
+                            <p class="text-light fw-bold">
+                                Follow Us
+                            </p>
+                            <p class="text-light fs-5">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-youtube"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row c3" style="min-height:200px;">
+                    <div class="col-sm-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7672.895323601025!2d80.966351!3d26.889394000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1726600295498!5m2!1sen!2sin" style="border:0;width:100%;height:450px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ufooter bg-mycolor1" style="min-height:300px;">
+            <div class="col-sm-3 text-light">
+                <p class="fs-4 my-3 ms-5">Indeed <strong class="txt-color2">Learning <i class="fa-solid fa-brain"></i></strong></p>
+                <p style="text-align:justify">Indeed Learning is a comprehensive learning management system designed to make education accessible, engaging, and effective. Whether you're a student, educator, or institution, we provide the tools and resources to enhance the learning experience. Join our platform to explore a wide range of courses, track progress, and collaborate seamlessly.</p>
+            </div>
+            <div class="col-sm-3 text-light">
+                <div class="row">
+                    <strong class="mt-4 ms-5 fs-5" ><span style="border-bottom:2px solid var(--color2)">Online Platform</span></strong><br />
+                    <ul style="list-style-type:none;text-align:left;margin-top:0%;font-size:18px;margin-left:15%;line-height:30px;">
+                        <li>About</li>
+                        <li>Courses</li>
+                        <li>Register</li>
+                        <li>Sign Up</li>
+                        <li>Sign In</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3 text-light">
+                <div class="row">
+                    <strong class="mt-4 fs-5"><span style="border-bottom:2px solid var(--color2)">Links</span></strong><br />
+                    <ul style="list-style-type:none;text-align:left;margin-top:7%;font-size:18px;line-height:30px;">
+                        <li>Contact Us</li>
+                        <li>FAQs</li>
+                        <li>Courses</li>
+                        <li>Sign In / Registration</li>
+                        <li>Coming Soon</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <p class="fs-4" style="word-spacing:10px;margin-top:30%">
+                    <a class="text-light ficon" href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="text-light ficon" href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a class="text-light ficon" href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a class="text-light ficon" href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="text-light ficon" href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </p>
+            </div>
+        </div>
+        <div class="row bfooter bg-mycolor3 text-light text-center">
+            <div class="col-sm-6">
+                Developed By : Er Abhijeet Singh
+            </div>
+            <div class="col-sm-6">
+                &copy; Techpile Technology Pvt. Ltd.
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/js/bootstrap.bundle.js"></script>
+</body>
+</html>

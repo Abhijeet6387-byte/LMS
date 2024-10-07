@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "notes";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row fs-3 pt-1 m-3 text-center"><span>Add and Manage <b class="txt-color1">Notes</b></span></div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-container">
+                <h4 class="mb-4">Add <b class="txt-color3">Notes</b></h4>
+                <form action="/admin/savenotes" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="batchName" class="form-label">Title of Notes:</label>
+                        <input type="text" class="form-control" name="txt_title"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="batchName" class="form-label">Description of Notes:</label>
+                        <textarea class="form-control" name="txt_desc"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="batchName" class="form-label">Uploaded By:</label>
+                        <input type="text" class="form-control" name="txt_teacher"/>
+                    </div>
+                    <div class="mb-3">
+                        <label for="batchName" class="form-label">Select Batch:</label>
+                        <select name="ddl_batch" id="batch_dropdown" required class="form-control mb-3 shadow bg-body-tertiary border-0">
+                            <option value="">Select Batch</option>
+                            @if(ViewBag.table1.Rows.Count > 0)
+            {
+                foreach(var row in ViewBag.table1.Rows)
+                {
+                    <option value="@row[0]">@row[1]</option>
+                }
+            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="batchName" class="form-label">Select Notes:</label>
+                        <input type="file" class="form-control" name="file_notes"/>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn bg-info">Add Notes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

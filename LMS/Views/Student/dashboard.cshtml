@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "dashboard";
+    Layout = "~/Views/Shared/StudentLayout.cshtml";
+}
+
+<style>
+    .cardzoom{
+        transition:all ease 2s;
+    }
+    .cardzoom:hover{
+        transform:scale(1.1);
+        transition:all ease 2s;
+    }
+    a{
+        text-decoration:none;
+    }
+    body{
+        background-color:azure;
+    }
+    .btn1{
+        padding:7px;
+        border-radius:5px;
+    }
+</style>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="text-center fs-2 mb-4">My<span class="txt-color2 fw-bold"> Dashboard</span></div>
+        <div class="col-sm-4">
+            <!--card start-->
+            <div class="card border-0 shadow p-2 rounded-2" style="width: 18rem;">
+                
+                @if (Session["uname"] == null)
+                {
+                    <script>
+                     alert("Please Login First");
+                    window.location.href = "/home/index";
+                    </script>
+                }
+                else
+                {
+                    <img src="~/Content/profilepic/@Session["picture"]" style="max-height:100px;max-width:100px;" class="rounded-circle img-fluid mx-auto" alt="..."/>
+                    
+                <div class="card-body">
+                    <h5 class="card-title">@Session["name"]</h5>
+                    <h5 class="card-title">@Session["uname"]</h5>
+                    <h5 class="card-title">@Session["phno"]</h5>
+                    <h5 class="card-title">@Session["course"]</h5>
+                    <h5 class="card-title">Batch: @Session["batch"]</h5>
+                    <a href="#" class="btn1 bg-mycolor1">Update Profile</a>
+                </div>
+                }
+            </div>
+
+            <!--card endd-->
+        </div>
+        <div class="col-sm-8 mt-5">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="/student/videolecture/" target="_blank">
+                        <div class="card  cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-circle-play fs-3"></i>
+                            <h5>Video Lecture</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <a href="/student/notes/" target="_blank">
+                        <div class="card  cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-book-open fs-3"></i>
+                            <h5>Notes</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <a href="/student/courses/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-book fs-3"></i>
+                            <h5>Courses</h5>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-3">
+                    <a href="/student/task/" target="_blank">
+                        <div class="card  cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-list-check fs-3"></i>
+                            <h5>Task</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <a href="/student/softwarekit/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-file-arrow-down fs-3"></i>
+                            <h5>Software Kit</h5>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-3">
+                    <a href="#">
+                        <div class="card  cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-key fs-3"></i>
+                            <h6>Change Password</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+

@@ -1,0 +1,174 @@
+﻿@{
+    ViewBag.Title = "Video";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<head>
+
+    <title>Video Submission Form</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #dee2e694;
+            padding: 20px;
+            border-radius: 5px;
+            
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            width: 400px;
+        }
+
+        
+
+        .txt_title, .txt_link, .txt_desc, .ddl_category, .file-thumbnail {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .txt_desc{
+            resize:none;
+        }
+        .btn_class {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+            .btn_class:hover {
+                background-color: #45a049;
+            }
+        .table-container {
+            padding: 20px;
+            background-color: #dee2e694;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row fs-3 my-2">
+            <center>Add <b class="txt-color2">Video </b></center>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 mt-3">
+                <div class="form-container">
+                    <h4><span class="mb-2" style="border-bottom:2px solid var(--color2)">Add Video</span></h4>
+                    <form method="post" action="/admin/savevideo" enctype="multipart/form-data">
+                        <div class="row  mt-3">
+                            <div class="col-sm-6">
+                                <label for="video_title">Video Title:</label>
+                                <input type="text" id="video_title" name="txt_title" class="txt_title" placeholder="Enter video Title" required>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="batch">Batch: </label>
+                                <select id="video_category" name="ddl_batch" class="ddl_category" required>
+                                    <option value="">Select Batch</option>
+                                    @if (ViewBag.tb1.Rows.Count > 0)
+                                    {
+                                        foreach (var row in ViewBag.tb1.Rows)
+                                        {
+
+                                            <option value="@row[0]">@row[1]</option>
+                                        }
+                                    }
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="video_category">Video Category:</label>
+                                <select id="video_category" name="ddl_category" class="ddl_category" required>
+                                    <option value="">Select Category</option>
+                                    @if (ViewBag.tb2.Rows.Count > 0)
+                                    {
+                                        foreach (var row in ViewBag.tb2.Rows)
+                                        {
+
+                                            <option value="@row[0]">@row[1]</option>
+                                        }
+                                    }
+                                </select>
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <label for="video_link">Video Link:</label>
+                                <input type="text" id="video_link" name="txt_link" class="txt_link" placeholder="Enter video Link" required>
+                            </div>
+                        </div>
+                        <label for="video-description">Video Description: </label>
+                        <textarea id=" video_description" name="txt_desc" class="txt_desc" rows="4" placeholder="Enter video Description" required></textarea>
+                        <label for="video_thumbnail">Video Thumbnail: </label>
+                        <input type="file" id="video_thumbnail" name="file_thumbnail" class="file-thumbnail" accept="image/*" required>
+
+                        <button type="submit" class="btn_class bg-danger my-2">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-sm-8 mt-3">
+                <h4><span class="mb-2" style="border-bottom:2px solid var(--color2)">Added Videos</span></h4>
+                <div class="table-container mt-3">
+                    <table class="table table-bordered table-hover" id="myTable">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Sr</th>
+                                <th>Video Title</th>
+                                <th>Batch</th>
+                                <th>Video Category</th>
+                                <th>Video Description</th>
+                                <th>Video Link</th>
+                                <th>Video Thumbnail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.tb3.Rows.Count > 0)
+                            {
+                                foreach (var row in ViewBag.tb3.Rows)
+                                {
+                                    <tr>
+                                        <td>@row[0]</td>
+                                        <td>@row[1]</td>
+                                        <td>@row[2]</td>
+                                        <td>@row[3]</td>
+                                        <td>@row[4]</td>
+                                        <td>@row[5]</td>
+                                        <td><img src="~/Content/videopic/@row[6]" height="60px" width="60px"></td>
+
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

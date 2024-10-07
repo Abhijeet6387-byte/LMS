@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "manageassignment";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="row fs-3 pt-1 m-3 text-center">
+    <span>Manage Assisgnment <b class="txt-color2">Uploaded By Students</b></span>
+</div>
+<div class="row m-3">
+    <table class="table table-bordered table-hover" id="mytable">
+        <thead class="table-dark text-uppercase">
+            <tr>
+                <th>Task No.</th>
+                <th>Task Subject</th>
+                <th>Task Title</th>
+                <th>Uploaded by</th>
+                <th>Last Date</th>
+                <th>Uplaoded On</th>
+                <th>Submitted By</th>
+                <th>Mobile</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Answer File</th>
+                <th>Submitted on</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @if (ViewBag.assignmgmt.Rows.Count > 0) { 
+                foreach(var row in ViewBag.assignmgmt.Rows)
+                {
+                    <tr>
+                        <td>@row["taskno"]</td>
+                        <td>@row["subject"]</td>
+                        <td>@row["title"]</td>
+                        <td>@row["teacher"]</td>
+                        <td>@row["lastdate"]</td>
+                        <td>@row["date"]</td>
+                        <td>@row["name"]</td>
+                        <td>@row["mobno"]</td>
+                        <td>@row["course"]</td>
+                        <td>@row["year"]</td>
+                        <td><a href="~/Content/answerfile/@row["answerfile"]"><i class="fa fa-download"></i></a></td>
+                        <td>@row[4]</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

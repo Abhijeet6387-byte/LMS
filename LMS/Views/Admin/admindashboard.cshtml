@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewBag.Title = "admindashboard";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<style>
+    .cardzoom {
+        transition: all ease 2s;
+    }
+
+        .cardzoom:hover {
+            transform: scale(1.1);
+            transition: all ease 2s;
+        }
+
+    a {
+        text-decoration: none;
+    }
+
+    body {
+        background-color: azure;
+    }
+
+    .btn1 {
+        padding: 7px;
+        border-radius: 5px;
+    }
+</style>
+
+@if (Session["admin"] == null)
+{
+    <script>
+        alert('Please Login')
+        location.href = '/home/adminlogin'
+    </script>
+}
+<div class="container mb-5">
+
+    <div class="row">
+        <div class="text-center fs-2 mb-4">Admin<span class="txt-color2 fw-bold"> Dashboard</span></div>
+
+        <div class="col-sm-12 mt-4 ms-5">
+
+            <div class="row">
+
+                <div class="col-sm-2">
+                    <a href="/admin/addbatch" target="_blank">
+                        <div class="card  cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-list-check fs-4"></i>
+                            <h6>Manage Batch</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <a href="/admin/addvideocategory/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-list fs-4"></i>
+                            <h6>Video Category</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <a href="/admin/video/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-play fs-4"></i>
+                            <h6>Add Video</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <a href="/admin/assignment/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-circle-check fs-4"></i>
+                            <h6>Manage Task</h6>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+
+                <div class="col-sm-2">
+                    <a href="/admin/manageenquiry/" target="_blank">
+                        <div class="card  cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-circle-question fs-4"></i>
+                            <h6>Manage Enquiry</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <a href="/admin/assignment/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-puzzle-piece fs-4"></i>
+                            <h6>Add Task</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <a href="/admin/managestudent/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-people-roof fs-4"></i>
+                            <h6>Manage Student</h6>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2">
+                    <a href="/admin/changepassword/" target="_blank">
+                        <div class="card cardzoom mx-auto p-3 text-center border-0 shadow">
+                            <i class="fa-solid fa-key fs-4"></i>
+                            <h6>Change Password</h6>
+                        </div>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

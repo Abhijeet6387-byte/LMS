@@ -1,0 +1,186 @@
+﻿@{
+    ViewBag.Title = "Assignment";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+
+
+<head>
+    <title>Assignment Submission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            height: 100vh;
+        }
+
+        .form-container {
+            
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            background-color: #dee2e694;
+            margin: 10px;
+        }
+
+            .form-container:hover {
+                transform: translateY(-5px);
+            }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        select, input[type="text"], input[type="date"], input[type="file"], textarea {
+            
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+
+            select:focus, input:focus, textarea:focus {
+                border-color: #4caf50;
+                outline: none;
+            }
+
+        textarea {
+            resize: none;
+        }
+
+        .btn_class {
+            background: #4caf50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+            .btn_class:hover {
+                background: #45a049;
+            }
+        .table-container {
+            padding: 5px;
+            background-color: #dee2e694;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-sm-12 fs-3 pt-1">
+            <div class="row">
+            <center>Add <b class="txt-color2">Assignment</b></center>
+            </div>
+        </div>
+
+            <div class="col-sm-4">
+                <div class="form-container mt-4">
+                    <form action="/admin/saveassignment" method="post" enctype="multipart/form-data">
+                        <h4 class="mb-4"><span style="border-bottom:2px solid var(--color2);padding-bottom:2px;">Add Video Category</span></h4>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="btach_dropdown">Batch Dropdown:</label>
+                                <select id="batch_dropdown" class="ddl_category" name="ddl_batch" style="width:100%" required>
+                                    <option value="">Select Batch</option>
+                                    @if (ViewBag.tb1.Rows.Count > 0)
+                                    {
+                                        foreach (var row in ViewBag.tb1.Rows)
+                                        {
+                                            <option value="@row[0]">@row[1]</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="subject_name">Subject Name:</label>
+                                <input type="text" id="subject_name" name="txt_subject" class="txt_title" placeholder="Enter Subject Name" required style="width:100%"/>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="assignment_title">Assignment Title:</label>
+                                <input type="text" id="assignment_title" name="txt_title" class="txt_num" placeholder="Enter Assignment Title" required style="width:100%"/>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>Uploaded By:</label>
+                                <input type="text" id="uploaded_by" class="txt_title" name="txt_teacher" placeholder="Enter Teacher's Name" required style="width:100%"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                                <label for="assignment_file">Assignment File:</label>
+                                <input type="file" id="assignment_file" name="file_assignment" class="add_file" accept=".pdf,.doc,.docx,.ppt,.pptx" required style="width:100%;background-color:white;" />
+
+                            </div>
+                            <div class="col-sm-6">
+
+                                <label for="last_date">Last Date:</label>
+                                <input type="date" id="last_date" name="date_lastdate" class="add_dt" required style="width:100%" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="assignment_description">Assignment Description:</label>
+                                <textarea id="assignment_description" name="txt_desc" class="txt_title" style="width:100%" placeholder="Enter Assignment Description" required></textarea>
+
+                            </div>
+                        </div>
+                        <button type="submit" class="btn_class">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-sm-8 mt-4">
+                <div class="table-container">
+                    <h4 class="mb-4"><span style="border-bottom:2px solid var(--color2);padding-bottom:2px;">Assignments</span></h4>
+
+                    <table class="table table-bordered table-hover" id="myTable">
+                        <thead class="table-dark" style="font-size:12px;">
+                            <tr>
+                                <th>Sr</th>
+                                <th>Batch</th>
+                                <th>Subject Name</th>
+                                <th>Assignment Title</th>
+                                <th>Assignment Description</th>
+                                <th>Assignment Picture</th>
+                                <th>Uploaded By</th>
+                                <th>Last Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.tb2.Rows.Count > 0)
+                            {
+                                foreach (var row in ViewBag.tb2.Rows)
+                                {
+                                    <tr>
+                                        <td>@row[0]</td>
+                                        <td>@row[1]</td>
+                                        <td>@row[2]</td>
+                                        <td>@row[3]</td>
+                                        <td>@row[4]</td>
+                                        <td><img src="/content/profilepic/@row[5]" height="60" width="60"></td>
+                                        <td>@row[6]</td>
+                                        <td>@row[7]</td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>

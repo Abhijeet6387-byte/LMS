@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Submit";
+    Layout = "~/Views/Shared/StudentLayout.cshtml";
+}
+
+<head>
+    <title>File Upload Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            width: 30%;
+            margin: 15px auto;
+        }
+        .form-container:hover{
+            transform:translateY(-5px);
+        }
+        label{
+            display:block;
+            margin-bottom:5px;
+            font-weight:bold;
+            color:#333;
+        }
+        input[type="file"],textarea{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:2px solid #ccc;
+            border-radius:5px;
+            transition:border-color 0.3s;
+        }
+        input[type="file"]:focus,
+        textarea:focus{
+            border-color:#4caf50;
+            outline:none;
+        }
+        textarea{
+            resize:none;
+        }
+        .btn_class{
+            background:#4caf50;
+            color:white;
+            padding:12px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+            width:100%;
+            transition:background 0.3s;
+        }
+        .btn_class:hover{
+            background:#45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <label for="file_upload">Choose File:</label>
+            <input type="file" id="file_upload" class="add_file" accept="/" required/>
+
+            <label for="message">Message:</label>
+            <textarea id="message" class="txt_title" rows="4" placeholder="Enter your message" required></textarea>
+
+            <button type="button" class="btn_class">Upload</button>
+        </form>
+    </div>
+</body>
+

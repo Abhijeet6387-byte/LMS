@@ -1,0 +1,82 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>adminlogin</title>
+    <link href="~/Content/css/all.css" rel="stylesheet" />
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" />
+    <script src="~/Content/js/bootstrap.bundle.js"></script>
+    <style>
+        :root {
+            --color1: #00447e;
+            --color2: orange;
+            --color3: black;
+        }
+
+        .bg-mycolor1 {
+            background: var(--color1);
+        }
+
+        .bg-mycolor2 {
+            background: var(--color2);
+        }
+
+        .bg-mycolor3 {
+            background: var(--color3);
+        }
+
+        .txt-color1 {
+            color: var(--color1) !important;
+        }
+
+        .txt-color2 {
+            color: var(--color2) !important;
+        }
+
+        .txt-color3 {
+            color: var(--color3) !important;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 bg-mycolor1">
+                <div class="row text-light text-center fs-5">
+                    <div class="col-sm-2"><a href="/home/index" style="text-decoration:none;color:white">Go To Home</a></div>
+                    <div class="col-sm-8 ">Welcome To The Admin Login Form</div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-5">
+            <div class="col-sm-4"> </div>
+            <div class="col-sm-4 rounded-2 shadow p-3">
+
+                <form action="/home/adminsignin" method="post">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"> Email address</label>
+                        <input required type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label"> Password</label>
+                        <input required type="password" class="form-control" name="password" id="exampleInputPassword1">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"> Submit</button>
+                </form>
+
+            </div>
+            <div class="col-sm-4"> </div>
+        </div>
+    </div>
+</body>
+</html>

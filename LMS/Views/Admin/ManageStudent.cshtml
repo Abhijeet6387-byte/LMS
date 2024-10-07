@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "ManageStudent";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row fs-3 pt-1 m-3">
+        <center>List Of All <strong>Registered Student</strong></center>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <table class="table table-bordered table-hover" id="mytable">
+                <thead class="table-dark">
+                    <tr>
+                        <td>Name</td>
+                        <td>Mobile No.</td>
+                        <td>Email Id</td>
+                        <td>Password</td>
+                        <td>Course & Branch</td>
+                        <td>Year</td>
+                        <td>Picture</td>
+                        <td>Batch Name</td>
+                        <td>Status</td>
+                        <td>Reg Date</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if(ViewBag.data.Rows.Count > 0)
+            {
+                foreach(var row in ViewBag.data.Rows)
+                {
+                    <tr>
+                        <td>@row["name"]</td>
+                        <td>@row["mobno"]</td>
+                        <td>@row["emailid"]</td>
+                        <td>@row["password"]</td>
+                        <td>@row["course"]</td>
+                        <td>@row["year"]</td>
+                        <td><img src="~/Content/profilepic/@row["picture"]" height="80" width="80"/></td>
+                        <td>@row[12]</td>
+                        <td><a href="/admin/updatestatus?email=@row["emailid"]&status=@(Convert.ToInt32(row[9]))">
+                            <button class="btn btn-danger">@row[9]</button>
+                            </a>
+                        </td>
+                        <td>@row["regdate"]</td>
+                    </tr>
+                }
+            }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="col-sm-1"></div>
+    </div>
+</div>
+
